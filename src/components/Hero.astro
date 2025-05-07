@@ -1,0 +1,96 @@
+---
+interface Props {
+    title: string;
+    subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>{title}</h1>
+            <p class="subtitle">{subtitle}</p>
+            <div class="cta-buttons">
+                <a href="/proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="/contacto" class="btn btn-outline">Contacto</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        padding: 6rem 0;
+        background: linear-gradient(to right, var(--secondary-color), #e8ebff);
+    }
+    
+    .hero-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        color: var(--dark-color);
+    }
+    
+    .subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        color: var(--body-color);
+    }
+    
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .btn-primary:hover {
+        background-color: #3357d6;
+        transform: translateY(-3px);
+    }
+    
+    .btn-outline {
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    
+    .btn-outline:hover {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+        .hero {
+            padding: 4rem 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style> 

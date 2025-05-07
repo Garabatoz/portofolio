@@ -1,11 +1,117 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Datos de ejemplo para el portafolio
+const aboutContent = [
+    "Soy un desarrollador web apasionado por crear experiencias digitales atractivas y funcionales. Con experiencia en tecnologías frontend y backend, me especializo en construir aplicaciones web modernas y escalables.",
+    "Mi objetivo es combinar diseño y funcionalidad para crear soluciones que no solo sean visualmente atractivas, sino también intuitivas y eficientes para los usuarios finales.",
+    "Cuando no estoy programando, disfruto de la fotografía, los viajes y aprender nuevas tecnologías para mejorar mis habilidades."
+];
+
+const skills = [
+    {
+        name: "HTML/CSS",
+        icon: "https://img.icons8.com/?size=80&id=20909&format=png",
+        level: 90
+    },
+    {
+        name: "JavaScript",
+        icon: "https://img.icons8.com/?size=80&id=108784&format=png",
+        level: 85
+    },
+    {
+        name: "PHP",
+        icon: "https://img.icons8.com/?size=100&id=fAMVO_fuoOuC&format=png",
+        level: 80
+    },
+    {
+        name: "Node.js",
+        icon: "https://img.icons8.com/?size=80&id=54087&format=png",
+        level: 70
+    },
+    {
+        name: "C#",
+        icon: "https://img.icons8.com/?size=100&id=45490&format=png",
+        level: 70
+    },
+    {
+        name: "Laravel",
+        icon: "https://img.icons8.com/?size=100&id=lRjcvhvtR81o&format=png",
+        level: 70
+    },
+    {
+        name: "MySQL",
+        icon: "https://img.icons8.com/?size=100&id=19672&format=png",
+        level: 65
+    },
+    {
+        name: "Vue.js",
+        icon: "https://img.icons8.com/?size=80&id=rY6agKizO9eb&format=png",
+        level: 60
+    },
+    {
+        name: "Tailwind CSS",
+        icon: "https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png",
+        level: 45
+    },
+    {
+        name: "Astro",
+        icon: "https://img.icons8.com/?size=100&id=lckHFUP7nJhG&format=png",
+        level: 40
+    }
+        
+];
+
+const projects = [
+    {
+        title: "Imagenes aleatorias",
+        description: "Una aplicación web para mostrar imagenes con dimensiones aleatorias cada vez que se carga la pagina.",
+        image: "/public/images/imagesPage.png",
+        tags: ["JavaScript", "HTML", "CSS", "Astro"],
+        demoUrl: "https://images-oo6fpa169-santiagos-projects-7144875a.vercel.app/",
+        repoUrl: "https://images-oo6fpa169-santiagos-projects-7144875a.vercel.app/"
+    },
+    {
+        title: "Ingresos y Gastos",
+        description: "Una aplicación web para registrar ingresos y gastos, con un dashboard para visualizar los datos.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+2",
+        tags: ["Vue.js", "JavaScript", "CSS"],
+        demoUrl: "#",
+        repoUrl: "#"
+    },
+    {
+        title: "Portfolio Personal",
+        description: "Sitio web personal para mostrar proyectos y habilidades, desarrollado con Astro para un rendimiento óptimo.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+3",
+        tags: ["Astro", "JavaScript", "CSS"],
+        demoUrl: "#",
+        repoUrl: "#"
+    }
+];
 ---
 
 <Layout>
-	<Welcome />
+	<Hero 
+		title="Desarrollador Web Full Stack" 
+		subtitle="Creando experiencias digitales modernas y funcionales que destacan en la web"
+	/>
+	
+	<About 
+		content={aboutContent}
+	/>
+	
+	<Skills 
+		skills={skills}
+	/>
+	
+	<Projects 
+		projects={projects}
+	/>
+	
+	<Contact />
 </Layout>

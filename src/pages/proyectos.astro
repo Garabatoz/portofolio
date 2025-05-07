@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects.astro';
+
+// Datos de ejemplo para los proyectos (podemos añadir más que en la página principal)
+const projects = [
+    {
+        title: "Imagenes aleatorias",
+        description: "Una aplicación web para mostrar imagenes con dimensiones aleatorias cada vez que se carga la pagina.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+1",
+        tags: ["JavaScript", "HTML", "CSS", "Astro"],
+        demoUrl: "https://images-oo6fpa169-santiagos-projects-7144875a.vercel.app/",
+        repoUrl: "https://images-oo6fpa169-santiagos-projects-7144875a.vercel.app/"
+    },
+    {
+        title: "Tienda Online",
+        description: "E-commerce completo con catálogo de productos, carrito de compras y pasarela de pagos. Integración con APIs de pago y sistema de gestión de inventario en tiempo real.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+2",
+        tags: ["Vue.js", "Express", "PostgreSQL", "Stripe", "Docker"],
+        demoUrl: "#",
+        repoUrl: "#"
+    },
+    {
+        title: "Portfolio Personal",
+        description: "Sitio web personal para mostrar proyectos y habilidades, desarrollado con Astro para un rendimiento óptimo y una experiencia de usuario fluida.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+3",
+        tags: ["Astro", "JavaScript", "CSS", "Responsive Design"],
+        demoUrl: "#",
+        repoUrl: "#"
+    },
+    {
+        title: "Aplicación de Clima",
+        description: "Aplicación que muestra el clima actual y pronóstico para los próximos días utilizando APIs de servicios meteorológicos. Incluye visualización de datos y geolocalización.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+4",
+        tags: ["React", "API REST", "Chart.js", "CSS Modules"],
+        demoUrl: "#",
+        repoUrl: "#"
+    },
+    {
+        title: "Blog Personal",
+        description: "Plataforma de blog con sistema de gestión de contenidos personalizado, categorías y funcionalidad de búsqueda avanzada.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+5",
+        tags: ["Next.js", "Markdown", "Tailwind CSS", "Vercel"],
+        demoUrl: "#",
+        repoUrl: "#"
+    },
+    {
+        title: "Plataforma de Cursos Online",
+        description: "Sistema de gestión de aprendizaje (LMS) para cursos online con reproducción de video, seguimiento de progreso y foros de discusión.",
+        image: "https://via.placeholder.com/600x400?text=Proyecto+6",
+        tags: ["Angular", "Firebase", "RxJS", "Node.js"],
+        demoUrl: "#",
+        repoUrl: "#"
+    }
+];
+---
+
+<Layout>
+    <div class="page-header">
+        <div class="container">
+            <h1>Mis Proyectos</h1>
+            <p>Una selección de los proyectos más destacados en los que he trabajado</p>
+        </div>
+    </div>
+    
+    <Projects 
+        title=""
+        projects={projects}
+    />
+</Layout>
+
+<style>
+    .page-header {
+        padding: 5rem 0 3rem;
+        background: linear-gradient(to right, var(--secondary-color), #e8ebff);
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--body-color);
+    }
+    
+    @media (max-width: 768px) {
+        .page-header {
+            padding: 3rem 0 2rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style> 

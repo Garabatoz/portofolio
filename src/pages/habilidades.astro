@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Skills from '../components/Skills.astro';
+
+// Datos de ejemplo para las habilidades
+const technicalSkills = [
+    {
+        name: "HTML/CSS",
+        icon: "https://img.icons8.com/?size=80&id=20909&format=png",
+        level: 90
+    },
+    {
+        name: "JavaScript",
+        icon: "https://img.icons8.com/?size=80&id=108784&format=png",
+        level: 85
+    },
+    {
+        name: "PHP",
+        icon: "https://img.icons8.com/?size=100&id=fAMVO_fuoOuC&format=png",
+        level: 80
+    },
+    {
+        name: "Node.js",
+        icon: "https://img.icons8.com/?size=80&id=54087&format=png",
+        level: 70
+    },
+    {
+        name: "C#",
+        icon: "https://img.icons8.com/?size=100&id=45490&format=png",
+        level: 70
+    },
+    {
+        name: "Laravel",
+        icon: "https://img.icons8.com/?size=100&id=lRjcvhvtR81o&format=png",
+        level: 70
+    },
+    {
+        name: "MySQL",
+        icon: "https://img.icons8.com/?size=100&id=19672&format=png",
+        level: 65
+    },
+    {
+        name: "Vue.js",
+        icon: "https://img.icons8.com/?size=80&id=rY6agKizO9eb&format=png",
+        level: 60
+    },
+    {
+        name: "Tailwind CSS",
+        icon: "https://img.icons8.com/?size=100&id=4PiNHtUJVbLs&format=png",
+        level: 45
+    },
+    {
+        name: "Astro",
+        icon: "https://img.icons8.com/?size=100&id=lckHFUP7nJhG&format=png",
+        level: 40
+    }
+];
+
+const designSkills = [
+    {
+        name: "UI/UX Design",
+        icon: "https://img.icons8.com/?size=80&id=iMoRrequiring0&format=png",
+        level: 70
+    },
+    {
+        name: "Responsive Design",
+        icon: "https://img.icons8.com/?size=80&id=v8RpPQUwv0N8&format=png",
+        level: 85
+    },
+    {
+        name: "CSS Frameworks",
+        icon: "https://img.icons8.com/?size=80&id=84710&format=png",
+        level: 80
+    },
+    {
+        name: "Accesibilidad Web",
+        icon: "https://img.icons8.com/?size=80&id=XRDcSB7SAWOu&format=png",
+        level: 75
+    }
+];
+
+const softSkills = [
+    {
+        name: "Trabajo en Equipo",
+        icon: "https://img.icons8.com/?size=80&id=hNtSJbA3OoVo&format=png",
+        level: 90
+    },
+    {
+        name: "Comunicación",
+        icon: "https://img.icons8.com/?size=80&id=LoL4bFzKmzQu&format=png",
+        level: 85
+    },
+    {
+        name: "Resolución de Problemas",
+        icon: "https://img.icons8.com/?size=80&id=lTkq9CyISvXR&format=png",
+        level: 85
+    },
+    {
+        name: "Gestión del Tiempo",
+        icon: "https://img.icons8.com/?size=80&id=ILJsUJWFsfrY&format=png",
+        level: 80
+    }
+];
+---
+
+<Layout>
+    <div class="page-header">
+        <div class="container">
+            <h1>Mis Habilidades</h1>
+            <p>Un resumen de las tecnologías y habilidades que he adquirido a lo largo de mi carrera</p>
+        </div>
+    </div>
+    
+    <Skills 
+        title="Habilidades Técnicas"
+        skills={technicalSkills}
+    />
+    
+    <Skills 
+        title="Habilidades de Diseño"
+        skills={designSkills}
+    />
+    
+    <Skills 
+        title="Habilidades Blandas"
+        skills={softSkills}
+    />
+</Layout>
+
+<style>
+    .page-header {
+        padding: 5rem 0 3rem;
+        background: linear-gradient(to right, var(--secondary-color), #e8ebff);
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-header p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--body-color);
+    }
+    
+    @media (max-width: 768px) {
+        .page-header {
+            padding: 3rem 0 2rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+        }
+    }
+</style> 
